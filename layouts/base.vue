@@ -46,7 +46,7 @@ export default {
         <ul class="flex flex-col lg:flex-row list-none ml-auto">
           <li class="nav-item">
             <NuxtLink
-              to="/home"
+              to="/"
               class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
             >
               <span class="ml-2">Home</span>
@@ -95,9 +95,12 @@ export default {
     </div>
   </nav>
 
-  <div class="min-h-screen font-kanit print:text-black">
+  <div class=" font-kanit print:text-black">
     <div class="container mx-auto">
-      <slot />
+      <div class="mx-2 md:mx-10 overflow-hidden">
+
+        <slot />
+      </div>
     </div>
   </div>
 </template>
