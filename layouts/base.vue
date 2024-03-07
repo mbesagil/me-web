@@ -49,7 +49,7 @@ export default {
               to="/"
               class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
             >
-              <span class="ml-2">Home</span>
+              <span class="">Home</span>
             </NuxtLink>
           </li>
 
@@ -58,7 +58,7 @@ export default {
               to="/medium"
               class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
             >
-              <span class="ml-2">Medium</span>
+              <span class="">Medium</span>
             </NuxtLink>
           </li>
 
@@ -67,29 +67,11 @@ export default {
               to="/portfolio"
               class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
             >
-              <span class="ml-2">Portfolio</span>
+              <span class="">Portfolio</span>
             </NuxtLink>
           </li>
 
-          <li class="nav-item">
-            <div
-              class="px-3 py-2 flex items-center uppercase font-bold leading-snug hover:opacity-75"
-            >
-              <span class="ml-2">
-                <ThemeToggle></ThemeToggle>
-              </span>
-            </div>
-          </li>
-
-          <li class="nav-item flex items-center">
-            <div
-              class="flex items-center uppercase font-bold leading-snug hover:opacity-75"
-            >
-              <span class="px-3 ml-2 py-3 lg:py-0">
-                <LanguageButton></LanguageButton>
-              </span>
-            </div>
-          </li>
+         
         </ul>
       </div>
     </div>
@@ -101,6 +83,18 @@ export default {
 
         <slot />
       </div>
+    </div>
+  </div>
+
+  <div
+    class="fixed bottom-4 md:bottom-8 print:hidden mx-auto left-0 right-0 flex w-full  px-6 md:px-5 justify-end"
+  >
+    <div class="">
+      <div class="mb-2">
+
+        <ThemeToggle></ThemeToggle>
+      </div>
+      <LanguageButton></LanguageButton>
     </div>
   </div>
 </template>

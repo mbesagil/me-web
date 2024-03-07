@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const nuxtapp = useNuxtApp();
 </script>
 
 <template>
@@ -9,9 +8,9 @@ const nuxtapp = useNuxtApp();
 
 <style>
 .router-link-active {
-  @apply text-gray-500 font-bold;
+  @apply  font-bold dark:bg-slate-700 bg-slate-300 rounded;
 }
 .router-link-active:hover {
-  @apply text-green-400 font-medium;
+  @apply  dark:bg-slate-600 bg-slate-400;
 }
 </style>

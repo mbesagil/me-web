@@ -24,4 +24,6 @@ export default defineNuxtConfig({
   ui: {
     icons: ["heroicons", "ph", "logos", "noto-v1", "eos-icons", "twemoji"],
   },
+
+
 });
