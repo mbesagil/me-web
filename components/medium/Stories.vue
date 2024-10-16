@@ -53,12 +53,11 @@ const stories = [
 
 <template>
   <div>
-    <h1 class="text-xl font-bold">{{ $t("medium.stories") }}</h1>
     <div class="mt-4 flex flex-col gap-6">
       <template v-for="stroy in stories" :key="stroy.title">
-        <div class="flex lg:justify-between flex-col lg:flex-row gap-2">
+        <div class="flex lg:justify-between flex-col lg:flex-row gap-2 border-b border-gray-200 dark:border-gray-800 pb-4">
           <div class="flex flex-col justify-start gap-1">
-            <h1 class="-mt-1 leading-none">
+            <h1 class="-mt-1 ps-2 leading-none">
               <a
                 :href="stroy.link"
                 target="_blank"

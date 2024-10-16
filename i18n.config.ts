@@ -52,6 +52,12 @@ export default defineI18nConfig(() => ({
         publish_date: "Publish Date",
         stories_list: {},
       },
+      navbar: {
+        home: "Home",
+        medium: "Medium",
+        live_projects: "Live Projects",
+        portfolio: "Portfolio",
+      },
     },
     TR: {
       welcome: "Hoş Geldiniz",
@@ -102,6 +108,13 @@ export default defineI18nConfig(() => ({
         stories: "Hikayeler",
         publish_date: "Yayınlanma Tarihi",
         stories_list: {},
+      },
+
+      navbar: {
+        home: "Anasayfa",
+        medium: "Medium",
+        live_projects: "Canlı Projeler",
+        portfolio: "Portfolio",
       },
     },
   },

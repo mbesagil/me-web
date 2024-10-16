@@ -4,6 +4,24 @@ export default {
   data() {
     return {
       showMenu: false,
+      navbarMenuData: [
+        {
+          key: "home",
+          to: "/",
+        },
+        {
+          key: "medium",
+          to: "/medium",
+        },
+        {
+          key: "live_projects",
+          to: "/live-projects",
+        },
+        {
+          key: "portfolio",
+          to: "/portfolio",
+        },
+      ],
     };
   },
   methods: {
@@ -44,54 +62,34 @@ export default {
         class="lg:flex lg:flex-grow items-center"
       >
         <ul class="flex flex-col lg:flex-row list-none ml-auto">
-          <li class="nav-item">
-            <NuxtLink
-              to="/"
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-            >
-              <span class="">Home</span>
-            </NuxtLink>
-          </li>
-
-          <li class="nav-item">
-            <NuxtLink
-              to="/medium"
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-            >
-              <span class="">Medium</span>
-            </NuxtLink>
-          </li>
-
-          <li class="nav-item">
-            <NuxtLink
-              to="/portfolio"
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-            >
-              <span class="">Portfolio</span>
-            </NuxtLink>
-          </li>
-
-         
+          <template v-for="item in navbarMenuData" :key="item.key">
+            <li class="nav-item">
+              <NuxtLink
+                :to="item.to"
+                class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
+              >
+                <span class="">{{ $t(`navbar.${item.key}`) }}</span>
+              </NuxtLink>
+            </li>
+          </template>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class=" font-kanit print:text-black">
+  <div class="font-kanit print:text-black">
     <div class="container mx-auto">
       <div class="mx-2 md:mx-10 overflow-hidden">
-
         <slot />
       </div>
     </div>
   </div>
 
   <div
-    class="fixed bottom-4 md:bottom-8 print:hidden mx-auto left-0 right-0 flex w-full  px-6 md:px-5 justify-end"
+    class="fixed bottom-4 md:bottom-8 print:hidden mx-auto left-0 right-0 flex w-full px-6 md:px-5 justify-end"
   >
     <div class="">
       <div class="mb-2">
-
         <ThemeToggle></ThemeToggle>
       </div>
       <LanguageButton></LanguageButton>
